@@ -1,0 +1,28 @@
+
+<nav class="navbar navbar-light bg-faded">
+  <div class="container">
+    <a class="navbar-brand" href='/'>
+    Schwiftology<span class='light'>Blog</a>
+    <ul class="nav navbar-nav pull-sm-right hidden-xs-down">
+      <li class="nav-item">
+         <%= link_to 'Blog', root_path, class: "nav-link #{yield(:blog_active)}" %>
+      </li>
+      <li class="nav-item">
+        <%= link_to 'Account', edit_author_registration_path %>
+      </li>
+        <li class="nav-item">
+          <%= link_to 'My posts', authors_posts_path, class: "nav-link #{yield(:author)}" %>
+      </li>
+      <li class="nav-item">
+        <%= link_to 'Sign in', new_author_session_path %>
+      </li>
+      <li class="nav-item">
+        <%= link_to 'Sign up', new_author_registration_path %>
+      </li>
+      <li class="nav-item">
+        <%= link_to 'Logout', destroy_author_session_path, method: :delete, class: "nav-link"  %>
+      </li>
+
+    </ul>
+  </div>
+</nav>
